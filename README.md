@@ -1,3 +1,7 @@
+# css框架选择 material2
+
+# 静态随机数据库选择 faker
+
 # AngualrBlog
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.0.
