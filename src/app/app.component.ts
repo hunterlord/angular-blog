@@ -1,18 +1,18 @@
-import { Component, OnInit } from "@angular/core";
-import * as faker from "faker";
-import { blogPostOptions, blogData } from "./services/blog";
+import { Component, OnInit } from '@angular/core';
+import * as faker from 'faker';
+import { BlogPostOptions, BlogData } from './services/blog';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
   title = faker.name.title();
 
-  blogList: Array<blogData> = [];
+  blogList: Array<BlogData> = [];
 
-  blogOptions: blogPostOptions = {
+  blogOptions: BlogPostOptions = {
     page: 1,
     per: 20,
     totalPage: 50
@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
   }
 
   getBlogList() {
-    const data: Array<blogData> = [];
+    const data: Array<BlogData> = [];
     for (let i = 0; i < this.blogOptions.per; i++) {
       data.push({
         avatar: faker.image.avatar(),
